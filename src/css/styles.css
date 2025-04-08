@@ -92,10 +92,15 @@
 
 
 .loader {
+
+  
   width: 48px;
   height: 48px;
   display: inline-block;
-  position: relative;
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
 }
 .loader::after,
 .loader::before {
@@ -104,14 +109,18 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 2px solid #FFF;
+  border: 5px solid black;
   position: absolute;
   left: 0;
   top: 0;
-  animation: animloader 2s linear infinite;
+  animation: animloader 5s linear infinite;
+  text-align: center;
+
+
+
 }
 .loader::after {
-  animation-delay: 1s;
+  animation-delay: 5s;
 }
 
 @keyframes animloader {
@@ -126,4 +135,5 @@
 }
 .hidden {
   display: none;
+  
 }
